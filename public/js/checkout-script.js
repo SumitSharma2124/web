@@ -64,7 +64,7 @@ function renderCart(cart) {
       <li data-id="${it.id}">
         <span>${it.name} × ${it.qty}</span>
         <span>${formatCurrency(it.lineTotal)}</span>
-        <button class="remove-btn" data-id="${it.id}" style="margin-left:10px;">✖</button>
+        <button class="remove-btn" data-id="${it.id}" aria-label="Remove ${it.name}">×</button>
       </li>
     `
     )

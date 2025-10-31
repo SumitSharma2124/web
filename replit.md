@@ -48,7 +48,7 @@ server.py           # Python HTTP server (runs on port 5000)
 - **Categories:** Royal Curries, Tandoor Items, Street Food, Lassis & Chai, Desserts
 
 ## Recent Changes
-- **October 31, 2025:** Initial Replit setup
+- **October 31, 2025:** Initial Replit setup & styling improvements
   - Created Python HTTP server with cache-control headers
   - Added missing `script.js` for authentication functionality
   - Fixed missing `remove()` method in Cart class for checkout
@@ -56,6 +56,9 @@ server.py           # Python HTTP server (runs on port 5000)
   - Root URL (/) automatically redirects to /html/index.html
   - Fixed navigation: server now automatically routes .html requests to /html/ directory
   - All pages (menu, store, checkout, reservations) are now accessible
+  - **Styled remove button** to match website theme (golden/red circular button)
+  - **Implemented cart counter sync** across all pages using shared cart-sync.js
+  - Cart count updates in real-time across all pages when items are added/removed
 
 ## Running the Project
 The website runs automatically via the configured workflow:
