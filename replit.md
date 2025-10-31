@@ -54,6 +54,8 @@ server.py           # Python HTTP server (runs on port 5000)
   - Fixed missing `remove()` method in Cart class for checkout
   - Configured workflow to serve on port 5000
   - Root URL (/) automatically redirects to /html/index.html
+  - Fixed navigation: server now automatically routes .html requests to /html/ directory
+  - All pages (menu, store, checkout, reservations) are now accessible
 
 ## Running the Project
 The website runs automatically via the configured workflow:

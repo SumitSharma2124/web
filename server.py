@@ -19,6 +19,8 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             self.path = '/html/index.html'
+        elif self.path.endswith('.html') and not self.path.startswith('/html/'):
+            self.path = '/html' + self.path
         return super().do_GET()
 
 if __name__ == '__main__':
