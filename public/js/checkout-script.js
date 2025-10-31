@@ -19,6 +19,10 @@ class Cart {
     this.state = {};
     this.save();
   }
+  remove(productID) {
+    delete this.state[productID];
+    this.save();
+  }
   count() {
     return Object.values(this.state).reduce((sum, item) => sum + item.qty, 0);
   }
