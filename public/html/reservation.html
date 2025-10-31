@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="../css/reservation-style.css">
+    <link rel="stylesheet" href="../css/auth-style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../assets/nav-logo.svg" alt="Old Rao logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home"> Home </a></li>
+                <li><a href="index.html#about"> About </a></li>
+                <li><a href="menu.html"> Menu </a></li>
+                <li><a href="reservation.html"> Reservation </a></li>
+                <li><a href="index.html#contact"> Contact </a></li>
+            </ul>
+            <div class="nav-icon">
+                <div class="icon cart">
+                    <a href="checkout.html"><img src="../assets/icons/shopping-cart.svg" alt="Cart Icon"></a>
+                    <span class="cart-counter">4</span>
+                </div>
+                <label class="icon user" for="auth-toggle">
+                    <img src="../assets/icons/profile.svg" alt="profile-icon">
+                </label>
+            </div>
+        </div>
+    </nav>
+    <input type="checkbox" id="auth-toggle" hidden>
+    <div class="auth-backdrop" aria-hidden="true">
+      <label class="auth-overlay-close" for="auth-toggle"></label>
+      <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div class="auth-header">
+          <h3 class="auth-title" id="auth-title">Welcome</h3>
+          <label class="auth-close" for="auth-toggle" aria-label="Close">×</label>
+        </div>
+        <div class="auth-tabs">
+          <input type="radio" name="auth-tab" id="auth-tab-login" checked>
+          <label for="auth-tab-login">Login</label>
+          <input type="radio" name="auth-tab" id="auth-tab-signup">
+          <label for="auth-tab-signup">Sign Up</label>
+          <div class="auth-body">
+            <div class="auth-pane auth-login">
+              <form>
+                <div class="auth-field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input type="password" required placeholder="••••••••"></div>
+                <button type="submit" class="auth-submit">Continue</button>
+              </form>
+              <div class="auth-footer">New here? Switch to Sign Up.</div>
+            </div>
+            <div class="auth-pane auth-signup">
+              <form>
+                <div class="auth-field"><label>Name</label><input type="text" required placeholder="Your name"></div>
+                <div class="auth-field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input type="password" required placeholder="Create password"></div>
+                <button type="submit" class="auth-submit">Create Account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="reservation">
+        <div class="reservation-container">
+            <div class="form-container">
+                <h2>Book a Table</h2>
+                <p class="subtitle">For you special occasion, so that we can make the best arrangement for <br/> your celebration with us.</p>
+                <form>
+                    <label for="Occasion">Occasion</label>
+                    <select name="occasion" id="occasion">
+                        <option>Birthday Celebration</option>
+                        <option>Anniversary</option>
+                        <option>Business Meeting</option>
+                        <option>Casual Dining</option>
+                    </select>
+                    <small>This will help us make the best arrangement for you</small>
+
+                    <label for="date">Event Date</label>
+                    <input type="date" id="date" name="date">
+
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" value="00:00">
+
+                    <label for="guest">Number of Guest</label>
+                    <div class="guests"> 
+                        <button type="button">-</button> <input type="number" id="guests" name="guests" value="1" min="1"> <button type="button">+</button>
+                    </div>
+                </form>
+                <a href="summary.html">
+                        <button class="checkout-btn">Checkout</button>
+                </a>
+            </div>
+            <div class="image-container"> 
+                <img src="../assets/illustrations/reserved.png" alt="Reserved Table">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

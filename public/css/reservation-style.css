@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --bg-color:#ffffff;
+    --navbar-bg-color:#BE2225;
+    --navbar-border-color:#F2C559;
+    --btn-bg-color:#B10003;
+    --btn-border-color:#C08F19;
+    --text-color:#C08F19;
+    --nav-text-color: #F2C559;
+    --nav-button-hover:#ffffff;
+    --nav-font: 'Lobster', sans-serif; 
+    --main-font: 'Lobster Two', sans-serif;
+    --secondary-font: 'Roboto Flex', sans-serif;
+}
+
+body{
+    margin: 0; 
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navbar-bg-color);
+    border-bottom: 8px solid var(--navbar-border-color);
+    height: 15%;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.logo{
+    margin-top: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style:none;
+    color: var(--nav-text-color);
+    padding: 12px 16px;
+    border: none;
+
+}
+
+.nav-menu a {
+    font-family: var(--nav-font);
+    font-family: var(--nav-font);
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--nav-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--nav-button-hover);
+}ss
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    gap:1.2rem;
+}
+
+.icon{
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+
+.cart-counter {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    color: var(--nav-text-color);
+}
+
+.reservation {
+    padding: 40px 16px;
+}
+
+.reservation-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.form-container {
+    flex: 1;
+    background: #fff;
+    border: 3px solid var(--navbar-border-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    font-family: var(--main-font);
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 16px; 
+}
+
+label { 
+    font-weight: 500;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
+select,
+input[type='date'],
+input[type='time'],
+input[type='number'],
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
+    padding: 12px 14px;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+    border: 3px solid var(--navbar-border-color);
+    border-radius: 10px;
+    outline: none;
+}
+
+select:focus,
+input[type='date']:focus,
+input[type='time']:focus,
+input[type='number']:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus {
+    border-color: var(--btn-border-color);
+    box-shadow: 0 0 0 2px rgba(192, 143, 25, 0.15);
+}
+
+small {
+    font-family: var(--secondary-font);
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.guest {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guests button { 
+    width: 30px; 
+    height: 30px; 
+    border: 3px solid var(--btn-border-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    background: var(--btn-bg-color); 
+    cursor: pointer; 
+}
+
+.checkout-btn {
+    font-family: var(--main-font);
+    font-size: 24px;
+    color: var(--nav-text-color);
+    padding: 15px 30px;
+    margin: 20px;
+    background-color: var(--btn-bg-color);
+    border: 6px solid var(--btn-border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.checkout-btn:hover {
+    background-color: var(--nav-button-hover);
+    color: var(--btn-bg-color);
+}
+.image-container {
+    flex: 1;
+    align-items: center;
+    background: #fff;
+    border: 3px solid var(--navbar-border-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 900px) {
+  .reservation-container { flex-direction: column; padding: 0 4px; }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Old Rao Hotel — Authentic Indian cuisine in Gurugram: royal curries, tandoori treasures, street food, lassis & chai. Dine-in, reservations, and online ordering.">
+  <title>TheOldRao</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth-style.css">
+  <link rel="stylesheet" href="../css/auth-additions.css">
+  <link rel="icon" type="image/png" href="../assets/nav-logo.svg">
+</head>
+<body> 
+  <nav>
+    <div class="navbar"> 
+      <div class="logo">
+        <img src="../assets/nav-logo.svg" alt="Old Rao logo">
+      </div>
+      <ul class="nav-menu">
+          <li><a href="#home"> Home </a></li>
+          <li><a href="#about"> About </a></li>
+          <li><a href="menu.html"> Menu </a></li>
+          <li><a href="reservation.html"> Reservation </a></li>
+          <li><a href="#contact"> Contact </a></li>
+      </ul>
+      <div class="nav-icon">
+        <div class="icon cart">
+          <a href="checkout.html"><img src="../assets/icons/shopping-cart.svg" alt="Cart Icon"></a>
+          <span class="cart-counter">4</span>
+        </div>
+        <div class="icon user">
+          <img src="../assets/icons/profile.svg" alt="profile-icon" id="userIcon">
+          <div class="user-menu">
+            <div class="user-email" id="userEmail"></div>
+            <div class="user-menu-item logout-btn" onclick="logout()">
+              <span>Logout</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <input type="checkbox" id="auth-toggle" hidden>
+    <div class="auth-backdrop" aria-hidden="true">
+      <label class="auth-overlay-close" for="auth-toggle"></label>
+      <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div class="auth-header">
+          <h3 class="auth-title" id="auth-title">Welcome</h3>
+          <label class="auth-close" for="auth-toggle" aria-label="Close">×</label>
+        </div>
+        <div class="auth-tabs">
+          <input type="radio" name="auth-tab" id="auth-tab-login" checked>
+          <label for="auth-tab-login">Login</label>
+          <input type="radio" name="auth-tab" id="auth-tab-signup">
+          <label for="auth-tab-signup">Sign Up</label>
+          <div class="auth-body">
+            <div class="auth-pane auth-login">
+              <form>
+                <div class="auth-field"><label>Email</label><input id="loginEmail" type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input id="loginPassword" type="password" required placeholder="••••••••"></div>
+                <button type="button" id="loginBtn" class="auth-submit">Continue</button>
+              </form>
+              <div class="auth-footer">New here? Switch to Sign Up.</div>
+            </div>
+            <div class="auth-pane auth-signup">
+              <form>
+                <div class="auth-field"><label>Name</label><input id="username" type="text" required placeholder="Your name"></div>
+                <div class="auth-field"><label>Email</label><input id="signupEmail" type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input id="signupPassword" type="password" required placeholder="Create password"></div>
+                <button type="button" id="signupBtn" class="auth-submit">Create Account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="message"></p>
+    </div>
+    <section class="hero-section" id="home">
+      <div class="logo-overlay">
+        <img src="../assets/nav-logo.svg" alt="Old Rao logo overlay">
+      </div>
+    </section>
+    <section class="about-section" id="about">
+      <h1>The city's favorite Indian dining experience for 7 years running</h1>
+      <h2>In 2025, Old Rao turns 7!</h2>
+      <p>We've been celebrated as one of the Top Indian Restaurants in the country by Food & Travel Magazine… <br/> Listed among the Best Family Dining Spots for 5 consecutive years by City Eats… <br/>  …and featured in the Top 100 Authentic Indian Experiences in Heritage Tastes' annual guide! Oh, spicy goodness! 🌶️</p>
+      <p>Old Rao Hotel brings the rich flavours of india straight to your plate - from aromatic curries to sizzling tandoori delights and figer- <br/> licking street food favourites. Pair it with our refreshing lassis, masala chai, or a fine dining experience that feels like home. <br/> Planning a celebration? We'd love to host your special moments - birthdays, weddings, or even photo shoots! For bookings, reach us at <br/> contact@oldraohotel.com. <br/> We look forward to serving you the taste of India, made with love. <br/> Phir milenge!</p>
+      <div class="about-section-btn">
+        <a href="menu.html"><button class="view-our-menu-btn">VIEW OUR MENU</button></a>
+        <a href="store.html"><button class="order-online-btn">ORDER ONLINE</button></a>
+      </div>
+    </section>
+    <section class="about-continued">
+      <div class="main-card">
+          <h1 class="title">Namaste... Welcome to Old Rao - the city's most exquisite Indian dining destination</h1>
+        <div class="card-row">
+          <div class="card card-1">
+            <p>Step into Old Rao... a heritage hotel and restaurant steped in <br/> tradition where the aroma of slow-cooked curries drifts through <br/> the air, copper vessels gleam in warm light and every dish tells <br/> a story from the royal kitchens of India. The piece de resistance: <br/> plates brimming with finger-licking delicacies - smoky tandoori <br/> kebabs, curries simmered to perfectio, buttery naan straight <br/> from the clay oven, and biryanis as fragrant as a Mughal <br/> garden.</p>
+            <p>For the indulgent and the mindful, there are wholesome <br/> vegetarian thalis, spice-kissed street-food favourites, and <br/> decadent sweets with a drizzle of saffron and  touch of <br/> nostalgia. To accompany it all: refreshing lassis, aromatic <br/>  masala chai, and fine blends steeped in centuries of tradition - <br/> sipped with the promise of "aao phir se"... you'll be back for <br/> more </p>
+          </div>
+          <div class="card card-2">
+            <h1>Location</h1>
+            <p>NH 8, Delhi - <br/> Jaipur Expy, Near BML Munjal <br/> University, <br/> Gurugram, <br/> Haryana - 123413</p>
+          </div>
+          <div class="card card-3">
+            <h1>Specialities</h1>
+            <p>Royal Thalis <br/> Signature curries & kebabs <br/> Authentic street food classics <br/> Traditional lassis & masala chai <br/> Exquisite Indian sweets</p>
+            <a href="menu.html"><button class="btn-menu">View Menu</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="specialities">
+        <h1>Old Rao Specialities</h1>
+        <div class="royal-curries-card">
+          <div>
+            <h2>Royal Curries</h2>
+            <p>Slow-simmered to perfection, our curries are crafted <br/> from age-old recipes, layered with spices that sing on <br/> the tongue — smoky cumin, fiery chili, goldern turmeric, <br/> and a whisper of saffron. Whether it's the buttery <br/> richness of a classic Paneer Butter Masala, or the regal <br/> depth og a Lamb Rogan Josh, every bite is a journey to <br/> India's royal kicthens. </p>
+            <em>Whatever your craving, prepare to fall in love with flavour <br/> all over again.</em>
+          </div>
+          <img src="../assets/illustrations/image1.png" alt="Royal Curries illustration">
+        </div>
+        <div class="tandoori-treasures-card">
+          <div>
+            <h2>Tandoori Treasures</h2>
+            <p>From the glowing embers of our clay tandoor come <br/> delihts kissed by fire and smoke — chicken marinated <br/> overnight in yogurt and spices, melt-in-the-mouth <br/> kebabs, and naan that puffs up like cloouds of heaven. <br/> Guiltless indulgenece, pure satisfactions.</p>
+            <em>Try our legenedary Tandoori Platter — the perfect feast <br/> for family and friends!</em>
+          </div>
+          <img src="../assets/illustrations/image2.png" alt="Tandoori Treasures illustration">
+        </div>
+        <div class="street-food-magic-card">
+          <div>
+            <h2>Street Food Magic</h2>
+            <p>Bring the buzz of Indian Bazaars to your table! Tangy <br/> chaats bursting with tamarind and crunchy sev, spicy <br/> samosas and sizzling pakoras — all served with a dash <br/> of nostalgia and a sprinkle of joy.</p>
+            <em>One bite, you'll hear the street sounds of Delhi and <br/> Mumbai in every crunch.</em>
+          </div>
+          <img src="../assets/illustrations/image3.png" alt="Street Food Magic illustration">
+        </div>
+        <div class="lassi-chai-love-card">
+          <div>
+            <h2>Lassi & Chai Love</h2>
+            <p>From frothy mango lassis to refreshing rose lassis, every <br/> sip is a cool escape. Or let the warm embrace of our <br/> masala chai comfort you — steeped with cardamom, ginger, and love.</p>
+            <em>Tradition in a glass, memories in every sip.</em>
+          </div>
+          <img src="../assets/illustrations/image4.png" alt="Lassi and Chai illustration">
+        </div>
+        <div class="sweet-endings-card">
+          <div>
+            <h2>Sweet Endings</h2>
+            <p>Golden jalebis, creamy rasmalai, and rich gulab jamuns <br/> soaked in syrupy bliss. Our desserts don't just end your <br/> meal — they make you heart sing.</p>
+            <em>Because no Indian feast is complete without a little <br/> sweetness.</em>
+          </div>
+          <img src="../assets/illustrations/image5.png" alt="Sweet Endings illustration">
+        </div>
+        <h2 class="qoute">At Old Rao, we say... "Pehle pet puja, phir kaam duja" — first feed the soul, then talk of anything else.</h2>
+      </section>
+    <section class="contact" id="contact">
+      <div class="contact-card">
+        <h1>Contact</h1>
+        <p>Reservation: WhatsApp 079999XXXXX <br/> Email: contact@OldRao.co.in</p>
+      </div>
+      <div class="find-us-card">
+        <h1>Find Us</h1>
+        <p>NH-8, Delhi - Jaipur Expy, <br/> Near BML Munjal University, <br/> Gurugram.</p>
+      </div>
+      <div class="opening-hours-card">
+        <h1>Opening Hours</h1>
+        <p>Monday - Saturday: <br/> 8:30 to 16:00 <br/> Sunday - Public Holidays: <br/> 9:00 to 14:00</p>
+      </div>
+      <div class="private-functions-card">
+        <h1>Private Functions and Shoot</h1>
+        <p>Ask us!</p>
+      </div>
+    </section>    
+  </main>
+  <footer>
+    <div class="footer-icons">
+      <div class="icon instagram"><img src="../assets/icons/instagram.svg" alt="Instagram-icon"></div>
+      <div class="icon X"><img src="../assets/icons/X.svg" alt="X-icon"></div>
+      <div class="icon facebook"><img src="../assets/icons/facebook.svg" alt="Facebook-icon"></div>
+    </div>
+    <p>&copy; 2025 The Old Rao Hotel. All Right Reserved.</p>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
+
+

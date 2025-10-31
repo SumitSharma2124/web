@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Old Rao Menu — Royal curries, tandoori items, street food, refreshing lassis and chai, and Indian desserts.">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../css/menu-style.css">
+    <link rel="stylesheet" href="../css/auth-style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../assets/nav-logo.svg" alt="Old Rao logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home"> Home </a></li>
+                <li><a href="index.html#about"> About </a></li>
+                <li><a href="menu.html"> Menu </a></li>
+                <li><a href="reservation.html"> Reservation </a></li>
+                <li><a href="index.html#contact"> Contact </a></li>
+            </ul>
+            <div class="nav-icon">
+                <div class="icon cart">
+                    <a href="checkout.html"><img src="../assets/icons/shopping-cart.svg" alt="Cart Icon"></a>
+                    <span class="cart-counter">4</span>
+                </div>
+                <label class="icon user" for="auth-toggle">
+                    <img src="../assets/icons/profile.svg" alt="profile-icon">
+                </label>
+            </div>
+        </div>
+    </nav>
+  <main>
+    <input type="checkbox" id="auth-toggle" hidden>
+    <div class="auth-backdrop" aria-hidden="true">
+      <label class="auth-overlay-close" for="auth-toggle"></label>
+      <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div class="auth-header">
+          <h3 class="auth-title" id="auth-title">Welcome</h3>
+          <label class="auth-close" for="auth-toggle" aria-label="Close">×</label>
+        </div>
+        <div class="auth-tabs">
+          <input type="radio" name="auth-tab" id="auth-tab-login" checked>
+          <label for="auth-tab-login">Login</label>
+          <input type="radio" name="auth-tab" id="auth-tab-signup">
+          <label for="auth-tab-signup">Sign Up</label>
+          <div class="auth-body">
+            <div class="auth-pane auth-login">
+              <form>
+                <div class="auth-field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input type="password" required placeholder="••••••••"></div>
+                <button type="submit" class="auth-submit">Continue</button>
+              </form>
+              <div class="auth-footer">New here? Switch to Sign Up.</div>
+            </div>
+            <div class="auth-pane auth-signup">
+              <form>
+                <div class="auth-field"><label>Name</label><input type="text" required placeholder="Your name"></div>
+                <div class="auth-field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input type="password" required placeholder="Create password"></div>
+                <button type="submit" class="auth-submit">Create Account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="hero">
+        <img src="../assets/nav-logo.svg" alt="Old Rao logo" class="hero-logo">
+      <h1>Old Rao Hotel</h1>
+    </section>
+
+    <section class="menu-container">
+      <p class="tagline">Exquisite Indian Cuisine | Since 2018</p>
+      <h2 class="menu-title">Royal Menu</h2>
+      <p class="intro">At Old Rao, we believe food is devotion — every dish is prepared to feed the soul as much as the body.</p>
+
+      <div class="menu-grid">
+        <div class="menu-block">
+          <h3>ROYAL CURRIES 👑 <span class="price">₹280 - ₹450</span></h3>
+          <ul id="menu-royal-curries">
+          </ul>
+        </div>
+        <div class="menu-block">
+          <h3>FROM THE TANDOOR 🔥 <span class="price">₹60 - ₹380</span></h3>
+          <ul id="menu-tandoor">
+          </ul>
+        </div>
+        <div class="menu-block">
+          <h3>STREET FOOD MAGIC <span class="price">₹80 - ₹220</span></h3>
+          <ul id="menu-street-food">
+          </ul>
+        </div>
+        <div class="menu-block">
+          <h3>REFRESHING LASSIS & CHAI 🍹☕<span class="price">₹60 - ₹150</span></h3>
+          <ul id="menu-lassiS-chai">
+          </ul>
+        </div>
+        <div class="menu-block full-width">
+          <h3>SWEET ENDING 🍮 <span class="price">₹70 - ₹180</span></h3>
+          <ul id="menu-sweet-endings">
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-icons">
+      <div class="icon instagram"><img src="../assets/icons/instagram.svg" alt="Instagram-icon"></div>
+      <div class="icon X"><img src="../assets/icons/X.svg" alt="X-icon"></div>
+      <div class="icon facebook"><img src="../assets/icons/facebook.svg" alt="Facebook-icon"></div>
+    </div>
+    <p>&copy; 2025 The Old Rao Hotel. All Right Reserved.</p>
+  </footer>
+  <script type="module" src="../js/menu-script.js"></script>
+</body>
+</html>

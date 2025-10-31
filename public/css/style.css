@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --bg-color:#ffffff;
+    --navbar-bg-color:#BE2225;
+    --navbar-border-color:#F2C559;
+    --btn-bg-color:#B10003;
+    --btn-border-color:#C08F19;
+    --text-color:#C08F19;
+    --nav-text-color: #F2C559;
+    --nav-button-hover:#ffffff;
+    --nav-font: 'Lobster', sans-serif; 
+    --main-font: 'Lobster Two', sans-serif;
+    --secondary-font: 'Roboto Flex', sans-serif;
+}
+
+body{
+    margin: 0; 
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navbar-bg-color);
+    border-bottom: 8px solid var(--navbar-border-color);
+    height: 15%;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo{
+    margin-top: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style:none;
+    color: var(--nav-text-color);
+    padding: 12px 16px;
+    border: none;
+
+}
+
+.nav-menu a {
+    font-family: var(--nav-font);
+    font-family: var(--nav-font);
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--nav-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--nav-button-hover);
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    gap:1.2rem;
+}
+
+.icon{
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+
+.cart-counter {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    color: var(--nav-text-color);
+}
+
+.hero-section{
+    background-image: url('../assets/hero-backgroud.JPG');
+    background-repeat: no-repeat;  
+    background-size: cover;       
+    background-blend-mode: saturation;
+    background-position: center;
+    padding-top: 120px;  
+    height: 100vh;                
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;                   
+    text-align: center;
+}
+
+.logo-overlay{
+    height: 30rem;
+    width: 30rem;
+    overflow: hidden;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-overlay img{
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+} 
+
+.logo-overlay img:hover{
+    transform: scale(1.05);
+}
+
+.about-section {
+    font-family: var(--main-font);
+    font-size: 24px;
+    color: var(--text-color);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+button.view-our-menu-btn{
+    font-family: var(--main-font);
+    font-size: 32px;
+    color: var(--nav-text-color);
+    padding: 15px 30px;
+    margin: 2rem;
+    background-color: var(--btn-bg-color);
+    border: 6px solid var(--btn-border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+button.order-online-btn{
+    font-family: var(--main-font);
+    font-size: 32px;
+    color: var(--nav-text-color);
+    padding: 15px 30px;
+    margin: 5rem;
+    background-color: var(--btn-bg-color);
+    border: 6px solid var(--btn-border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+button.view-our-menu-btn:hover,
+button.order-online-btn:hover {
+  background-color: var(--nav-button-hover);
+  color: var(--btn-bg-color);
+}
+
+.about-continued {
+    font-family: var(--main-font);
+    padding: 3rem 1.5rem;
+}
+
+.main-card {
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.main-card .card-2 h1 {
+  font-size: 3rem;
+}
+
+.main-card .card-3 h1 {
+  font-size: 2.5rem;
+}
+
+.title {
+  font-size: 3rem !important;  
+  text-align: center;
+  color: var(--text-color);
+  font-family: var(--main-font);
+  margin-bottom: 2rem;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+}
+
+
+
+.card-1 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--text-color);
+    padding: 1.5rem;
+}
+
+.card-2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--text-color);
+    padding: 1.5rem;
+}
+
+.card-3 {
+    font-size: 1.5rem;
+    text-align: left;
+    color: var(--text-color);
+    padding: 1.5rem;
+}
+
+button.btn-menu {
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: var(--nav-text-color);
+    padding: 15px 30px;
+    margin: 2rem;
+    background-color: var(--btn-bg-color);
+    border: 6px solid var(--btn-border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+button.btn-menu:hover {
+    background-color: var(--nav-button-hover);
+    color: var(--btn-bg-color);
+}
+
+.specialities {
+    max-width: 100%;
+    margin: auto;
+    gap: 2rem;
+    display: grid;
+    padding: 1.8rem;
+} 
+
+.specialities h1 {
+    font-family: var(--main-font);
+    font-size: 48px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.specialities h2 {
+    font-family: var(--main-font);
+    font-size: 32px;
+    color: var(--text-color);
+}
+
+.specialities .qoute {
+    font-family: var(--main-font);
+    font-size: 32px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.royal-curries-card {
+    display: flex;
+    align-items: center;  
+    justify-content: space-between; 
+    gap: 1.5rem;
+    padding: 0 10rem 0 10rem;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
+.royal-curries-card img{
+    width: 252px;
+    height: 241px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.tandoori-treasures-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10rem 0 10rem;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
+.tandoori-treasures-card img{
+    width: 252px;
+    height: 241px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.street-food-magic-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10rem 0 10rem;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
+.street-food-magic-card img{
+    width: 252px;
+    height: 241px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.lassi-chai-love-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10rem 0 10rem;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
+.lassi-chai-love-card img{
+    width: 252px;
+    height: 241px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.sweet-endings-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10rem 0 10rem;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
+.sweet-endings-card img {
+    width: 252px;
+    height: 241px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 3rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contact h1 {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--navbar-bg-color);
+    font-family: var(--secondary-font);
+    color: var(--nav-text-color);
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 3rem 0;
+    border-top: 8px solid var(--navbar-border-color);
+}
+
+.footer-icons{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .navbar { padding: 0 1rem; }
+  button.nav-item { font-size: 22px; padding: 10px 12px; }
+  .about-section { font-size: 20px; }
+  .about-section-btn { gap: 2rem; }
+  .card-row { grid-template-columns: 1fr; }
+  .royal-curries-card,
+  .tandoori-treasures-card,
+  .street-food-magic-card,
+  .lassi-chai-love-card,
+  .sweet-endings-card { padding: 1rem; gap: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .logo-overlay { height: 16rem; width: 16rem; }
+  .title { font-size: 2rem !important; }
+  .specialities h1 { font-size: 32px; }
+  .specialities h2 { font-size: 22px; }
+  .about-section-btn button { font-size: 22px; margin: 1rem; }
+  .nav-icon .cart-counter { font-size: 1rem; }
+}
+

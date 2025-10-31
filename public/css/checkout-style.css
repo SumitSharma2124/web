@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --bg-color:#ffffff;
+    --navbar-bg-color:#BE2225;
+    --navbar-border-color:#F2C559;
+    --btn-bg-color:#B10003;
+    --btn-border-color:#C08F19;
+    --text-color:#C08F19;
+    --nav-text-color: #F2C559;
+    --nav-button-hover:#ffffff;
+    --nav-font: 'Lobster', sans-serif; 
+    --main-font: 'Lobster Two', sans-serif;
+    --secondary-font: 'Roboto Flex', sans-serif;
+}
+
+*{ box-sizing: border-box; }
+body{ margin:0; padding:0; background:#fff; }
+
+.navbar{
+    display:flex; align-items:center; justify-content:space-between;
+    background: var(--navbar-bg-color);
+    border-bottom: 8px solid var(--navbar-border-color);
+    padding: 0 2rem; position: sticky; top:0; z-index: 50;
+}
+.logo{ margin-top: 0.5rem; }
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style:none;
+    color: var(--nav-text-color);
+    padding: 12px 16px;
+    border: none;
+
+}
+
+.nav-menu a {
+    font-family: var(--nav-font);
+    font-family: var(--nav-font);
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--nav-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--nav-button-hover);
+}
+.nav-icon{ display:flex; align-items:center; gap:1rem; }
+.icon{ cursor:pointer; transition: transform .2s; }
+.icon:hover{ transform: scale(1.2); }
+.cart-counter{ font-family: var(--secondary-font); color: var(--nav-text-color); }
+
+main{ padding: 1rem 1rem 3rem 1rem; }
+.checkout-container{ max-width: 1100px; margin: 0 auto; }
+.checkout-container h1{ font-family: var(--main-font); color: var(--text-color); text-align:center; margin: 1rem 0 1.5rem 0; }
+
+.cart-summary{ width: 260px; background: #fff; border: 3px solid var(--navbar-border-color); border-radius: 12px; padding: 10px; margin: 0 auto 1rem 0; }
+.cart-summary h2{ font-family: var(--main-font); color: var(--text-color); font-size: 1.1rem; margin: 0 0 .5rem 0; }
+.cart-list{ list-style:none; margin:0; padding:0; font-family: var(--secondary-font); font-size: .9rem; color: var(--text-color); }
+.cart-list li{ display:flex; justify-content:space-between; padding:6px 8px; background: #BE2225; color:#fff; border-radius: 6px; margin-bottom:6px; }
+.cart-list li.total{ background: #8f1719; font-weight:700; }
+
+.checkout-form{ display:grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items:start; }
+.form-section h2{ font-family: var(--main-font); color: var(--text-color); font-size: 1.1rem; margin: .5rem 0 .5rem 0; }
+.grid.two-col{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field{ display:flex; flex-direction:column; gap:6px; margin-bottom: 12px; }
+.field span{ font-family: var(--secondary-font); color: var(--text-color); font-size: .9rem; }
+.field input, .field select{ font-family: var(--secondary-font); padding: 10px 12px; border-radius: 8px; border: 3px solid var(--navbar-border-color); outline:none; color: var(--text-color); }
+.field input:focus, .field select:focus{ border-color: var(--btn-border-color); box-shadow: 0 0 0 2px rgba(192,143,25,.15); }
+
+.delivery-btn{ background-color: var(--navbar-bg-color); font-family: var(--main-font); color:#fff; padding: 12px 30px; font-size: 16px; border-radius: 25px; cursor: pointer; font-weight:700; border: 3px solid var(--navbar-border-color); display:block; width: 260px; margin: 10px auto 0 auto; transition: background-color .2s, color .2s; }
+.delivery-btn:hover{ background: var(--nav-button-hover); color: var(--btn-bg-color); }
+
+footer{ display:flex; flex-direction:column; align-items:center; justify-content:center; background: var(--navbar-bg-color); border-top: 8px solid var(--navbar-border-color); color: var(--nav-text-color); padding: 2rem 0; font-family: var(--secondary-font); }
+.footer-icons{ display:flex; gap:.5rem; margin-bottom:.5rem; }
+
+@media (max-width: 900px){
+  .checkout-form{ grid-template-columns: 1fr; }
+  .cart-summary{ width: 100%; max-width: 320px; margin: 0 auto 1rem auto; }
+}

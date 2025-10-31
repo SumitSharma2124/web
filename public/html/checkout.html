@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout at Old Rao — review your cart and securely enter billing and payment details before placing your order.">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/checkout-style.css">
+    <link rel="stylesheet" href="../css/auth-style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../assets/nav-logo.svg" alt="Old Rao logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home"> Home </a></li>
+                <li><a href="index.html#about"> About </a></li>
+                <li><a href="menu.html"> Menu </a></li>
+                <li><a href="reservation.html"> Reservation </a></li>
+                <li><a href="index.html#contact"> Contact </a></li>
+            </ul>
+            <div class="nav-icon">
+                <div class="icon cart">
+                    <a href="checkout.html"><img src="../assets/icons/shopping-cart.svg" alt="Cart Icon"></a>
+                    <span class="cart-counter">4</span>
+                </div>
+                <label class="icon user" for="auth-toggle">
+                    <img src="../assets/icons/profile.svg" alt="profile-icon">
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <input type="checkbox" id="auth-toggle" hidden>
+    <div class="auth-backdrop" aria-hidden="true">
+      <label class="auth-overlay-close" for="auth-toggle"></label>
+      <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div class="auth-header">
+          <h3 class="auth-title" id="auth-title">Welcome</h3>
+          <label class="auth-close" for="auth-toggle" aria-label="Close">×</label>
+        </div>
+        <div class="auth-tabs">
+          <input type="radio" name="auth-tab" id="auth-tab-login" checked>
+          <label for="auth-tab-login">Login</label>
+          <input type="radio" name="auth-tab" id="auth-tab-signup">
+          <label for="auth-tab-signup">Sign Up</label>
+          <div class="auth-body">
+            <div class="auth-pane auth-login">
+              <form>
+                <div class="auth-field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input type="password" required placeholder="••••••••"></div>
+                <button type="submit" class="auth-submit">Continue</button>
+              </form>
+              <div class="auth-footer">New here? Switch to Sign Up.</div>
+            </div>
+            <div class="auth-pane auth-signup">
+              <form>
+                <div class="auth-field"><label>Name</label><input type="text" required placeholder="Your name"></div>
+                <div class="auth-field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+                <div class="auth-field"><label>Password</label><input type="password" required placeholder="Create password"></div>
+                <button type="submit" class="auth-submit">Create Account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="checkout-container">
+            <h1>Checking Out</h1>
+
+            <aside class="cart-summary">
+                <h2>Your Cart</h2>
+                <ul class="cart-list">
+                    <li>
+                        <span>Paneer Butter Masala</span>
+                        <span>₹320</span>
+                    </li>
+                    <li>
+                        <span>Dal Makhani</span>
+                        <span>₹280</span>
+                    </li>
+                    <li>
+                        <span>Garlic / Butter Naan</span>
+                        <span>₹60</span>
+                    </li>
+                    <li>
+                        <span>Revenue Code</span>
+                        <span>₹54</span>
+                    </li>
+                    <li class="total">
+                        <span>Total</span>
+                        <span>₹714</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="checkout-form">
+                <div class="form-section">
+                    <h2>Billing Address</h2>
+                    <div class="grid two-col">
+                        <label class="field">
+                            <span>First name</span>
+                            <input type="text" placeholder="First name">
+                        </label>
+                        <label class="field">
+                            <span>Last name</span>
+                            <input type="text" placeholder="Last name">
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span>Email</span>
+                        <input type="email" placeholder="you@example.com">
+                    </label>
+                    <label class="field">
+                        <span>Contact Number</span>
+                        <input type="tel" placeholder="9876543210">
+                    </label>
+                    <label class="field">
+                        <span>Address</span>
+                        <input type="text" placeholder="Street, Area, City">
+                    </label>
+                </div>
+
+                <div class="form-section">
+                    <h2>Payment</h2>
+                    <label class="field">
+                        <span>Method</span>
+                        <select>
+                            <option>Debit/Credit Card</option>
+                            <option>UPI</option>
+                            <option>Cash on Delivery</option>
+                        </select>
+                    </label>
+                    <div class="grid two-col">
+                        <label class="field">
+                            <span>Name on Card</span>
+                            <input type="text" placeholder="Full name">
+                        </label>
+                        <label class="field">
+                            <span>Number on Card</span>
+                            <input type="text" inputmode="numeric" placeholder="1234 5678 9012 3456">
+                        </label>
+                    </div>
+                    <div class="grid two-col">
+                        <label class="field">
+                            <span>Expiration</span>
+                            <input type="text" placeholder="MM/YY">
+                        </label>
+                        <label class="field">
+                            <span>CVV</span>
+                            <input type="password" inputmode="numeric" placeholder="***">
+                        </label>
+                    </div>
+                </div>
+
+                <button class="delivery-btn">Continue to Checkout</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-icons">
+            <div class="icon instagram"><img src="../assets/icons/instagram.svg" alt="Instagram-icon"></div>
+            <div class="icon X"><img src="../assets/icons/X.svg" alt="X-icon"></div>
+            <div class="icon facebook"><img src="../assets/icons/facebook.svg" alt="Facebook-icon"></div>
+        </div>
+        <p>&copy; 2025 The Old Rao Hotel. All Right Reserved.</p>
+    </footer>
+    <script type="module" src="../js/checkout-script.js"></script>
+</body>
+</html>
+
+
